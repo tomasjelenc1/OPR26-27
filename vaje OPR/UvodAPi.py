@@ -38,4 +38,14 @@ call2 = requests.get(base_url2).json()
 print(call2["daily"]["temperature_2m_max"])
 
 #Vaja3 Ugotovi, kateri dan bo najtoplejši oz. najhladnejši, in izpiši datum ter temperaturo.
- 
+base_url3 = "https://api.open-meteo.com/v1/forecast?latitude=46.2248&longitude=14.1721&daily=temperature_2m_max,temperature_2m_min&timezone=Europe%2FBerlin" 
+call3 = requests.get(base_url3).json()
+sez = call(["daily"]["temperature_2m_max"])
+sez2 = call(["daily"]["temperature_2m_min"])
+najtopljše = 0
+najhladnješe = 0
+print(sez)
+print(sez2)
+
+
+#Vaja4 Ugotovi, kateri dan ima največjo razliko med dnevno in nočno temperaturo.
